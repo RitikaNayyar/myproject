@@ -3,7 +3,7 @@ name: Orbit Windows 2008 R2
 description: Admin User on VM is cloudadmin which is userdefined and provided at the time of requesting new VM.
 status: PUBLISHED
 properties:
-  _archiveDays: 25
+  _archiveDays: 21
   _deploymentName:
     default: ''
     required: true
