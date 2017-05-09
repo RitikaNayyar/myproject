@@ -1,0 +1,7 @@
+name: "auto-generated-pkg-1917b87a-8297-4442-b4f6-d88d9c4307c6"
+productVersion: "7.2.0-SNAPSHOT"
+data:
+- locator: "composite-blueprint/OrbitWindows2008R2.yaml"
+  name: "Orbit Windows 2008 R2"
+  description: "Orbit Windows 2008 R2"
+exportTime: "2017-05-08T20:54:18.749Z"

@@ -1,0 +1,82 @@
+id: OrbitWindows2008R2
+name: Orbit Windows 2008 R2
+description: Admin User on VM is cloudadmin which is userdefined and provided at the time of requesting new VM.
+status: PUBLISHED
+properties:
+  _archiveDays: 21
+  _deploymentName:
+    default: ''
+    required: true
+    secured: false
+    visible: true
+  _leaseDays:
+    default: 30
+    max: 180
+    min: 30
+components:
+  Windows2008_Server:
+    type: Infrastructure.CatalogItem.Machine.Virtual.vSphere
+    data:
+      OneCloud.Environment:
+        default: POC
+        required: false
+        secured: false
+        visible: false
+      VirtualMachine.Customize.WaitComplete:
+        default: 'false'
+        required: false
+        secured: false
+        visible: false
+      _cluster:
+        default: 1
+        max: 10
+        min: 1
+      action:
+        fixed: LinkedClone
+      allow_storage_policies:
+        fixed: false
+      blueprint_type:
+        fixed: '1'
+      cpu:
+        default: 16
+        max: 16
+        min: 16
+      disks:
+      - capacity: 120
+        custom_properties: null
+        id: 1489783300776
+        initial_location: ''
+        is_clone: true
+        label: Hard disk 1
+        storage_reservation_policy: ''
+        userCreated: false
+        volumeId: 0
+      guest_customization_specification: Windows
+      max_network_adapters: {}
+      max_volumes: {}
+      memory:
+        default: 16384
+        max: 32768
+        min: 16384
+      provisioning_workflow:
+        fixed:
+          id: CloneWorkflow
+          label: CloneWorkflow
+      security_groups: []
+      security_tags: []
+      source_machine_external_snapshot:
+        fixed: 2
+      source_machine_name:
+        fixed: Orbit Windows 2008
+      source_machine_vmsnapshot:
+        fixed:
+          id: '3644'
+      storage:
+        default: 120
+        max: 1104
+        min: 120
+    propertyGroups:
+    - DefaultBlueprintProperties
+    - DNScorpzoneinternalzonecom
+layout:
+  Windows2008_Server: 0,0
